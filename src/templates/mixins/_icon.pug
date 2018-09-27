@@ -1,0 +1,8 @@
+- var svgSprite = 'img/sprite.svg'
+
+mixin svg(name, modClass = '')
+  svg(class=`icon-${name} ${modClass}`)
+    use(xlink:href=`${svgSprite}#icon-${name}`)
+
+mixin i(name, classMod = '')
+  i(class= 'zmdi ' + `zmdi-${name} ${classMod}`)

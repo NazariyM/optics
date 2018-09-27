@@ -1,0 +1,30 @@
+.header
+   $parent: &
+   position: absolute
+   top: 0
+   left: 0
+   width: 100%
+   z-index: 100
+   &__container
+      display: flex
+      align-items: center
+      padding-top: 20px
+      height: 90px
+      +xs
+         height: 70px
+         padding-top: 0
+   &__logo
+      margin-right: 100px
+      flex: 0 0 170px
+      z-index: 101
+      +sm
+         margin-right: 0
+      +xs
+         flex: 0 0 120px
+   &__contact
+      margin-left: auto
+      z-index: 101
+      +md
+         margin-right: 30px
+      +xs
+         margin-right: 20px

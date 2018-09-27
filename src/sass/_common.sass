@@ -1,0 +1,214 @@
+body
+   min-width: 320px
+   -webkit-font-smoothing: antialiased
+   -moz-osx-font-smoothing: grayscale
+   +f('gp400', 16, 24)
+   color: $color2
+   &.is-locked
+      position: fixed
+      top: 0
+      left: 0
+      right: 0
+      height: 0
+      overflow: hidden
+
+.container
+   position: relative
+   z-index: 1
+   max-width: 1140px
+   padding: 0 15px
+   margin: 0 auto
+   
+.row
+   display: flex
+   margin: 0 -15px
+   
+.col
+   padding: 0 15px
+
+.main
+   overflow: hidden
+   
+.section
+   position: relative
+   padding: 100px 0 110px
+   +xs
+      padding: 60px 0
+
+.btn
+   position: relative
+   display: inline-block
+   padding: 29px 30px 28px
+   outline: 0
+   border-radius: 50px
+   color: #fff
+   text-align: center
+   box-shadow: -1px 15px 17px 1px rgba(3, 122, 153, 0.12)
+   overflow: hidden
+   cursor: pointer
+   +f('gp700')
+   font-size: 14px
+   text-transform: uppercase
+   letter-spacing: 1.05px
+   &:hover
+      &::after
+         transform: translateY(-50%)
+   &::after
+      position: absolute
+      top: -2px
+      left: -2px
+      right: -2px
+      height: calc(200% + 4px)
+      pointer-events: none
+      border-radius: 28px
+      background-image: linear-gradient(to top, #3ae1ff 0%, #00afe1 50%, #3ae1ff 100%)
+      transition: .4s cubic-bezier(.22,.61,.36,1)
+      content: ''
+   span
+      position: relative
+      z-index: 1
+      
+.title
+   position: relative
+   +f('gp300', 52, 55)
+   color: $color3
+   +xs
+      font-size: 28px
+      line-height: 32px
+   &::after
+      position: absolute
+      width: 120px
+      height: 4px
+      background-color: #3b3a43
+      background-image: linear-gradient(to right, #00afe1 0%, #3ae1ff 100%)
+      border-radius: 2px
+      content: ''
+      +xs
+         width: 60px
+      
+   &_white
+      color: $white
+   &_left
+      padding-right: 150px
+      +xs
+         padding-right: 70px
+      &::after
+         top: calc(50% - -4px)
+         right: 0
+   &_center
+      padding-bottom: 26px
+      text-align: center
+      +xs
+         padding-bottom: 15px
+      &::after
+         bottom: 0
+         left: calc(50% - 60px)
+         +xs
+            left: calc(50% - 30px)
+   span
+      display: block
+      margin-left: -8px
+      color: $color1
+      +f('gram', 72, 72)
+      +xs
+         font-size: 34px
+         line-height: 34px
+      @supports (-webkit-background-clip: text)
+         background-image: linear-gradient(to top, #00afe1 0%, #3ae1ff 100%)
+         -webkit-background-clip: text
+         -webkit-text-fill-color: transparent
+         
+.title-sm
+   +f('gp500')
+   letter-spacing: 1.2px
+   text-transform: uppercase
+   &_blue
+      color: $color1
+   &_grad
+      color: $color1
+      @supports (-webkit-background-clip: text)
+         background: linear-gradient(to top, #00afe1 0%, #3ae1ff 100%)
+         -webkit-background-clip: text
+         -webkit-text-fill-color: transparent
+   span
+      +f('gp400')
+      text-transform: none
+      letter-spacing: 0
+   p
+      display: inline
+      +f('gp400')
+      letter-spacing: 0
+      text-transform: none
+      color: $color2
+strong
+   +f('gp700')
+         
+.decor-text-bg
+   position: absolute
+   z-index: 1
+   width: 1056px
+   height: 303px
+   pointer-events: none
+   background: url("../img/decor/q-optics_text.png")
+   +cover
+   +sm
+      width: 712px
+      height: 200px
+   +xs
+      display: none
+.grad-border
+   $parent: &
+   position: relative
+   &_circle
+      border-radius: 50%
+   &::after
+      position: absolute
+      top: -1px
+      left: -1px
+      right: -1px
+      bottom: -1px
+      width: 1px
+      content: ''
+      background-image: linear-gradient(to top, #00afe1 0%, #3ae1ff 100%)
+      opacity: .7
+      #{$parent}_circle &
+         border-radius: 50%
+         
+   &::before
+      position: absolute
+      top: -1px
+      left: 0
+      right: -1px
+      bottom: -1px
+      height: 1px
+      content: ''
+      background-image: linear-gradient(to top, #00afe1 0%, #3ae1ff 100%)
+      opacity: .7
+      #{$parent}_circle &
+         border-radius: 50%
+         
+   &__lines
+      &::after
+         position: absolute
+         top: -1px
+         right: -1px
+         bottom: -1px
+         width: 1px
+         content: ''
+         background-image: linear-gradient(to top, #00afe1 0%, #3ae1ff 100%)
+         opacity: .7
+         #{$parent}_circle &
+            border-radius: 50%
+            
+      &::before
+         position: absolute
+         right: -1px
+         left: 0
+         bottom: -1px
+         height: 1px
+         content: ''
+         background-image: linear-gradient(to top, #00afe1 0%, #3ae1ff 100%)
+         opacity: .7
+         #{$parent}_circle &
+            border-radius: 50%
+            

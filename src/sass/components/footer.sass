@@ -1,0 +1,36 @@
+.footer
+   padding: 60px 0
+   background-color: #25242e
+   +xs
+      padding: 30px 0 40px
+   &__container
+      display: flex
+      justify-content: space-between
+      +xs
+         flex-direction: column
+         
+   &__logo
+      margin-bottom: 40px
+      +xs
+         width: 130px
+         margin-bottom: 0
+   &__col
+      &:nth-child(1)
+         flex: 0 0 145px
+         +xs
+            display: flex
+            align-items: center
+            justify-content: space-between
+            flex: 0 1 auto
+            width: auto
+            margin-bottom: 25px
+      &:nth-child(2)
+         flex: 0 0 445px
+         +xs
+            flex: 0 1 auto
+   &__socials
+      padding-left: 5px
+      +xs
+         padding: 0
+   &__subscribe
+      margin-top: -5px

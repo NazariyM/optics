@@ -1,0 +1,144 @@
+$icons: (0:0)
+$icons: map-merge($icons,('A': (X: -296px, Y:-247px, W: 52px, H: 55px, TW: 473px, TH: 483px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('N': (X: -296px, Y:-378px, W: 36px, H: 42px, TW: 473px, TH: 483px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('O': (X: -349px, Y:-312px, W: 42px, H: 44px, TW: 473px, TH: 483px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('P': (X: -342px, Y:-378px, W: 35px, H: 42px, TW: 473px, TH: 483px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('R': (X: -296px, Y:-312px, W: 43px, H: 56px, TW: 473px, TH: 483px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('Z': (X: -296px, Y:-430px, W: 32px, H: 44px, TW: 473px, TH: 483px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('allert-message': (X: -439px, Y:-40px, W: 16px, H: 17px, TW: 473px, TH: 483px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('car-1': (X: -151px, Y:0px, W: 135px, H: 237px, TW: 473px, TH: 483px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('car-2': (X: 0px, Y:0px, W: 141px, H: 236px, TW: 473px, TH: 483px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('car-3': (X: 0px, Y:-246px, W: 138px, H: 237px, TW: 473px, TH: 483px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('car-4': (X: -296px, Y:0px, W: 133px, H: 237px, TW: 473px, TH: 483px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('car-5': (X: -151px, Y:-247px, W: 134px, H: 234px, TW: 473px, TH: 483px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('certificate': (X: -439px, Y:0px, W: 34px, H: 30px, TW: 473px, TH: 483px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('discount': (X: -387px, Y:-378px, W: 34px, H: 34px, TW: 473px, TH: 483px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('lamp': (X: -439px, Y:-67px, W: 12px, H: 15px, TW: 473px, TH: 483px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('like': (X: -382px, Y:-430px, W: 34px, H: 34px, TW: 473px, TH: 483px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('wrench': (X: -338px, Y:-430px, W: 34px, H: 34px, TW: 473px, TH: 483px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('А': (X: -358px, Y:-247px, W: 52px, H: 55px, TW: 473px, TH: 483px, IMG: '../img/sprite.png')))
+
+
+// Gets an attribute from the sass map
+@function icon-attr($icon, $attr)
+  $icon: map-get($icons, $icon)
+  @return map-get($icon, $attr)
+
+@mixin sprite($iconName)
+  background-image: url(icon-attr($iconName, IMG))
+  width: icon-attr($iconName, W)
+  height: icon-attr($iconName, H)
+  background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-position($iconName)
+  background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-retina($iconName)
+  background-image: url(icon-attr($iconName, IMG))
+  $width: icon-attr($iconName, W)
+  $height: icon-attr($iconName, H)
+  width: $width/2
+  height: $height/2
+  $x: icon-attr($iconName, X)
+  $y: icon-attr($iconName, Y)
+  background-position: $x/2 $y/2
+  $tw: icon-attr($iconName, TW)   
+  $th: icon-attr($iconName, TH)
+  background-size: $tw/2 $th/2    
+
+
+@mixin s($i)
+  +sprite($i)
+@mixin sp($i)
+  +sprite-position($i)
+@mixin sr($i)
+  +sprite-retina($i)  
+
+.icon-A
+  width: 52px
+  height: 55px
+  background-image: url('../img/sprite.png')
+  background-position: -296px -247px
+.icon-N
+  width: 36px
+  height: 42px
+  background-image: url('../img/sprite.png')
+  background-position: -296px -378px
+.icon-O
+  width: 42px
+  height: 44px
+  background-image: url('../img/sprite.png')
+  background-position: -349px -312px
+.icon-P
+  width: 35px
+  height: 42px
+  background-image: url('../img/sprite.png')
+  background-position: -342px -378px
+.icon-R
+  width: 43px
+  height: 56px
+  background-image: url('../img/sprite.png')
+  background-position: -296px -312px
+.icon-Z
+  width: 32px
+  height: 44px
+  background-image: url('../img/sprite.png')
+  background-position: -296px -430px
+.icon-allert-message
+  width: 16px
+  height: 17px
+  background-image: url('../img/sprite.png')
+  background-position: -439px -40px
+.icon-car-1
+  width: 135px
+  height: 237px
+  background-image: url('../img/sprite.png')
+  background-position: -151px 0px
+.icon-car-2
+  width: 141px
+  height: 236px
+  background-image: url('../img/sprite.png')
+  background-position: 0px 0px
+.icon-car-3
+  width: 138px
+  height: 237px
+  background-image: url('../img/sprite.png')
+  background-position: 0px -246px
+.icon-car-4
+  width: 133px
+  height: 237px
+  background-image: url('../img/sprite.png')
+  background-position: -296px 0px
+.icon-car-5
+  width: 134px
+  height: 234px
+  background-image: url('../img/sprite.png')
+  background-position: -151px -247px
+.icon-certificate
+  width: 34px
+  height: 30px
+  background-image: url('../img/sprite.png')
+  background-position: -439px 0px
+.icon-discount
+  width: 34px
+  height: 34px
+  background-image: url('../img/sprite.png')
+  background-position: -387px -378px
+.icon-lamp
+  width: 12px
+  height: 15px
+  background-image: url('../img/sprite.png')
+  background-position: -439px -67px
+.icon-like
+  width: 34px
+  height: 34px
+  background-image: url('../img/sprite.png')
+  background-position: -382px -430px
+.icon-wrench
+  width: 34px
+  height: 34px
+  background-image: url('../img/sprite.png')
+  background-position: -338px -430px
+.icon-А
+  width: 52px
+  height: 55px
+  background-image: url('../img/sprite.png')
+  background-position: -358px -247px

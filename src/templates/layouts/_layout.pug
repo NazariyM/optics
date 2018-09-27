@@ -1,0 +1,36 @@
+include ../bemto/index
+include ../mixins/all
+include ../partials/_popups
+
+doctype html
+html(lang='ru')
+
+  block variables
+
+  head
+    meta(charset="utf-8")
+    title= title || 'Template'
+    meta(http-equiv="X-UA-Compatible" content="IE=Edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="theme-color" content="#1cb3e4")
+    meta(name="format-detection" content="telephone=no")
+    link(rel="stylesheet" media="all" href="css/app.css")
+
+  block body
+    body(class= bodyClass)
+
+      block header
+        include ../partials/_header
+
+      block content
+
+      block footer
+        include ../partials/_footer
+
+      block modals
+        +popup({ name: 'contact-popup' })
+        +popup({ name: 'thanks-popup' })
+
+      //LOAD SCRIPTS
+      block scripts
+        script(src="js/app.js")

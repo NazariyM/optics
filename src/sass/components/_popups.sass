@@ -1,0 +1,125 @@
+.popup
+   position: fixed
+   top: 0
+   right: 0
+   bottom: 0
+   left: 0
+   opacity: 0
+   visibility: hidden
+   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+   z-index: 1300
+   overflow: auto
+   outline: 0
+   text-align: center
+   font-size: 0
+   transform: translate3d(0, 0, 0)
+   transition: .3s ease-in-out
+   will-change: opacity, transform
+   $parent: &
+   &::before
+      +coverdiv
+      opacity: .9
+      background: #17171a url(../img/decor/noise_black.png)
+      content: ''
+   &:after
+      content: ''
+      display: inline-block
+      vertical-align: middle
+      width: 0
+      height: 100%
+   
+   &.opened
+      opacity: 1
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"
+      visibility: visible
+   &__close
+      position: absolute
+      top: -35px
+      right: 15px
+      z-index: 10
+      cursor: pointer
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 20px
+      height: 20px
+      border: 0
+      +xs
+         top: -30px
+         right: 15px
+      &:hover svg
+         fill: $white
+      svg
+         fill: rgba($white, .5)
+         font-size: 20px
+         +trs
+   
+   &__container
+      display: inline-block
+      vertical-align: middle
+      max-width: 874px
+      width: 100%
+      position: relative
+      padding: 0 15px
+      margin: 30px auto
+      transition: opacity .5s ease, transform .5s ease
+      transform: translate3d(0, -100px, 0)
+      will-change: transform, opacity
+      text-align: left
+      border-radius: 5px
+      +mob-fix
+      &_xs
+         max-width: 410px
+         
+body.popup-opened
+   overflow: hidden
+
+.popup.opened .popup__container
+   -webkit-transform: translate3d(0, 0, 0)
+   -moz-transform: translate3d(0, 0, 0)
+   transform: translate3d(0, 0, 0)
+  
+// *** begin thanks-popup *** //
+.thanks-popup
+   text-align: center
+   &__btn
+      display: none
+   p
+      color: $color2
+      font-size: 18px
+      line-height: 24px
+      text-align: center
+      +xs
+         font-size: 16px
+// end thanks-popup //
+
+// *** begin contact-form *** //
+.contact-form
+   padding: 40px 30px
+   box-shadow: 0 25px 45px rgba(5, 31, 49, 0.1)
+   background-color: #ffffff
+   +xs
+      padding: 30px 15px
+   &__top-text
+      margin-bottom: 25px
+      text-align: center
+   &__title
+      margin-bottom: 10px
+      font-size: 18px
+      color: $color3
+      letter-spacing: 1.35px
+   p
+      font-size: 14px
+      line-height: 16px
+      color: #4e4d4d
+   &__field
+      &:not(:last-child)
+         margin-bottom: 10px
+   &__submit-btn
+      width: 100%
+      margin-top: 15px
+      margin-bottom: 30px
+      letter-spacing: 1px
+      padding: 22px 30px 20px
+// end contact-form //
+

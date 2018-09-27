@@ -1,0 +1,889 @@
+// *** begin screen *** //
+.screen
+   height: 100vh
+   padding-top: 90px
+   background-image: radial-gradient(circle 960px at center, #42414b 0%, #25242e 100%)
+   +mob-fix
+      height: 200vh
+   +xs
+      padding-top: 70px
+   &__container
+      display: flex
+      align-items: flex-end
+      justify-content: space-between
+      padding-bottom: 103px
+      height: 100%
+      +xs
+         padding-bottom: 80px
+   &__img
+      &-wrap
+         position: absolute
+         top: 50%
+         left: 50%
+         z-index: 2
+         width: percentage(880 / 1140)
+         transform: translate(-50.6%, -50%)
+         +xs
+            top: 40%
+            width: 105%
+            transform: translate(-48.5%, -50%)
+      &-label
+         position: absolute
+         top: 33%
+         right: 9%
+         z-index: 1
+         +flexCenter
+         width: 131px
+         height: 131px
+         padding: 27px 15px 15px
+         box-shadow: 0 12px 17px 1px rgba(9, 21, 40, 0.2)
+         background-color: #ffffff
+         background-image: linear-gradient(to top, #00afe1 0%, #3ae1ff 100%)
+         +f('gp500', 15, 20)
+         letter-spacing: 1.13px
+         text-transform: uppercase
+         text-align: center
+         border-radius: 50%
+         color: #fff
+         +xs
+            display: none
+            //width: 84px
+            //height: 84px
+            //font-size: 10px
+            //line-height: 14px
+            //padding: 6px 15px 0
+         &::after
+            position: absolute
+            top: 7px
+            left: 7px
+            right: 7px
+            bottom: 7px
+            border: 1px solid #ffffff
+            opacity: 0.5
+            border-radius: 50%
+            content: ''
+            +xs
+               top: 4px
+               left: 4px
+               right: 4px
+               bottom: 4px
+   &__decor-text
+      position: absolute
+      top: 25px
+      left: 50%
+      transform: translateX(-50%)
+      +md
+         top: 15%
+      +xs
+         display: block
+         top: 7%
+         height: 80px
+         width: 300px
+         
+   &__text
+      max-width: 500px
+   &__title
+      margin-bottom: 30px
+      font-size: 48px
+      &::after
+         display: none
+   &__sub-title
+      font-size: 14px
+      letter-spacing: 1.05px
+      +xs
+         font-size: 12px
+   &__award-img
+      margin-bottom: 7px
+      flex: 0 0 117px
+      width: 117px
+      +xs
+         display: none
+// end screen //
+
+// *** begin advantages *** //
+.advantages
+   padding: 100px 0 105px
+   &__decor-text
+      top: -40px
+      left: 60px
+      +md
+         left: 10px
+   &__container
+      z-index: 3
+   &__title
+      max-width: 894px
+      margin-bottom: 50px
+      +lg
+         padding-right: 130px
+         max-width: 815px
+      +md
+         max-width: 562px
+      +xs
+         margin-bottom: 30px
+   &__block
+      display: flex
+      cursor: default
+      +md
+         flex-direction: column
+   &__list
+      z-index: 1
+      flex: 0 0 555px
+      width: 555px
+      +md
+         flex: 0 1 auto
+         width: 100%
+         margin-bottom: 40px
+         counter-reset: advCounter
+      &-item
+         position: relative
+         padding-left: 24px
+         font-size: 18px
+         counter-increment: advCounter
+         +md
+            font-size: 16px
+            padding-left: 35px
+         &:not(:last-child)
+            margin-bottom: 44px
+            +md
+               margin-bottom: 25px
+         &::before
+            position: absolute
+            top: 8px
+            left: 3px
+            width: 8px
+            height: 8px
+            border-radius: 50%
+            background-color: #29d3f6
+            background-image: linear-gradient(to top, #00afe1 0%, #3ae1ff 100%)
+            content: ''
+            +md
+               top: -3px
+               left: 0
+               width: 25px
+               height: 25px
+               +flexCenter
+               color: #fff
+               +f('gp500', 12)
+               content: counter(advCounter)
+   &__line
+      position: absolute
+      top: calc(50% - 1px)
+      +md
+         display: none
+      &-el
+         position: absolute
+         top: 0
+         left: 0
+         width: 100%
+         .adv-line
+            stroke-width: 2
+            opacity: .5
+            fill: none
+         .js-adv-line
+            opacity: 1
+            stroke-width: 2
+            fill: none
+      &_1
+         width: 757px
+         height: 24px
+         left: 202px
+      &_2
+         width: 374px
+         left: 305px
+         top: calc(50% - -2px)
+      &_3
+         left: 310px
+         width: 552px
+         height: 12px
+      &_4
+         width: 196px
+         height: 1px
+         left: 535px
+      &_5
+         left: 510px
+         top: 11px
+         width: 166px
+         height: 25px
+      &_6
+         top: 0
+         left: 225px
+         width: 700px
+         transform: scaleY(-1)
+         height: 15px
+      &_7
+         top: -87px
+         left: 204px
+         width: 950px
+         height: 96px
+         
+   &__view
+      position: relative
+      flex: 0 0 750px
+      width: 750px
+      margin: 20px 0 0 50px
+      +md
+         flex: 0 1 auto
+         width: 100%
+         max-width: 750px
+         margin: 0 0 0 100px
+      +sm
+         margin: 0
+      +xs
+         width: 120%
+         margin-left: -15px
+      &-plus
+         position: absolute
+         z-index: 1
+         width: 40px
+         height: 40px
+         box-shadow: 0 12px 17px 1px rgba(9, 21, 40, 0.2)
+         background-color: #3b3a43
+         background-image: linear-gradient(to top, #00afe1 0%, #3ae1ff 100%)
+         border-radius: 50%
+         text-align: center
+         line-height: 40px
+         font-size: 20px
+         overflow: hidden
+         +xs
+            width: 18px
+            height: 18px
+            line-height: 18px
+   
+         i
+            &:nth-child(1)
+               +md
+                  display: none
+            &:nth-child(2)
+               display: none
+               +md
+                  display: block
+                  font-size: 16px
+                  +f('gp500')
+               +xs
+                  font-size: 10px
+               
+         &_1
+            top: 3.3%
+            left: 44.4%
+            +xs
+               top: 5.3%
+         &_2
+            top: 10.1%
+            left: 9.8%
+         &_3
+            top: 34%
+            left: 31.5%
+         &_4
+            top: 42.3%
+            left: 16.8%
+         &_5
+            top: 70%
+            left: 6.7%
+         &_6
+            top: 69%
+            left: 39.9%
+         &_7
+            top: 63.6%
+            left: 70.3%
+         span
+            opacity: 0
+            +coverdiv
+            background-image: linear-gradient(to top,#007292 0%,#3ae1ff 100%)
+         i
+            position: relative
+            z-index: 1
+            color: $white
+            font-style: normal
+            
+// end advantages //
+
+// *** begin info *** //
+.info
+   background-color: $color8
+   &__decor-text
+      bottom: -145px
+      left: 153px
+      +md
+         left: 33px
+   &__container
+      display: flex
+      justify-content: flex-end
+   &__inner
+      z-index: 2
+      max-width: 650px
+      +md
+         max-width: none
+         width: percentage(460 / 738)
+      +xs
+         width: 100%
+   &__title
+      margin-bottom: 34px
+      padding-right: 50px
+      +md
+         max-width: 380px
+      +xs
+         margin-bottom: 20px
+         padding-right: 80px
+      &::after
+         top: calc(50% - -1px)
+         right: -32px
+         width: 80px
+         +xs
+            right: 0
+   &__descr
+      margin-bottom: 34px
+      +xs
+         margin-bottom: 25px
+      &-title
+         margin-bottom: 11px
+         +md
+            padding-right: 30px
+      p
+         &:not(:last-child)
+            margin-bottom: 15px
+   &__block
+      position: relative
+      padding: 34px 27px 30px
+      color: #5b5969
+      font-size: 10px
+      line-height: 18px
+      +md
+         padding: 25px 19px 20px
+      +xs
+         padding: 20px 18px
+      &-top
+         display: flex
+         margin-bottom: 22px
+         +xs
+            flex-direction: column
+            margin-bottom: 10px
+      &-graph
+         display: flex
+         flex: 0 0 180px
+         width: 180px
+         +xs
+            margin-bottom: 20px
+            width: 100%
+         &-val
+            width: 26px
+            margin-right: 5px
+            +md
+               display: flex
+               flex-direction: column
+               justify-content: space-between
+            div
+               &:not(:last-child)
+                  margin-bottom: 15px
+         &-body
+            flex: 1
+            height: 180px
+            background-image: linear-gradient(to top, #00afe1 0%, #3ae1ff 100%)
+            +md
+               height: auto
+      &-text
+         flex: 1
+         padding: 10px 0 0 24px
+         +md
+            padding: 0 0 0 17px
+         +xs
+            position: relative
+            padding: 40px 0 0 0
+         p
+            margin-bottom: 20px
+            font-size: 13px
+            +xs
+               margin-bottom: 10px
+   
+      &-title
+         margin-bottom: 15px
+         font-size: 14px
+         letter-spacing: 1.05px
+         color: $color3
+      &-scale
+         position: relative
+         padding-bottom: 10px
+         font-size: 12px
+         line-height: 18px
+         color: $color7
+         +xs
+            position: absolute
+            top: -10px
+            left: 25px
+            width: 100%
+            
+         &::before
+            position: absolute
+            bottom: 0
+            left: -25px
+            width: 100%
+            height: 1px
+            border-radius: 1px
+            background-image: linear-gradient(to right, #00afe1 0%, #3ae1ff 100%)
+            opacity: 0.2
+            content: ''
+         &::after
+            position: absolute
+            bottom: 0
+            left: 0
+            width: 110px
+            height: 5px
+            border-radius: 1px
+            background-color: $color7
+            content: ''
+      &-bot
+         display: flex
+         padding-left: 30px
+         +xs
+            padding-left: 0
+            flex-direction: column
+      &-hint
+         position: relative
+         padding-left: 23px
+         letter-spacing: 0.5px
+         +xs
+            padding-left: 20px
+         &:not(:last-child)
+            +xs
+               margin-bottom: 10px
+         &::before
+            position: absolute
+            top: 0
+            left: 0
+            width: 15px
+            height: 15px
+            content: ''
+            
+         &_blue
+            &::before
+               background-image: linear-gradient(to top, #00afe1 0%, #3ae1ff 100%)
+         &_pink
+            &::before
+               background-color: $color7
+         &:not(:last-child)
+            margin-right: 35px
+// end info //
+
+// *** begin choose *** //
+.choose
+   &__title
+      margin-bottom: 55px
+   &__top-row
+      margin-bottom: 52px
+      +md
+         flex-wrap: wrap
+         justify-content: center
+         
+   &__product-row
+      +md
+         flex-wrap: wrap
+         justify-content: center
+   &__item
+      position: relative
+      display: flex
+      align-items: center
+      flex: 0 1 calc(33.33333% - 30px)
+      width: calc(33.33333% - 30px)
+      margin: 0 15px
+      font-size: 14px
+      opacity: .55
+      transition: .3s ease-in-out
+      +md
+         min-width: 350px
+      +xs
+         min-width: 0
+         width: 100%
+         flex: 0 1 auto
+         max-width: 420px
+         opacity: 1
+      &:hover
+         opacity: 1
+      &:not(:last-child)
+         &::after
+            position: absolute
+            top: 0
+            right: -16px
+            bottom: 0
+            width: 1px
+            background-image: linear-gradient(to top, #00afe1 0%, #3ae1ff 100%)
+            opacity: 0.5
+            content: ''
+            +xs
+               display: none
+      &:nth-child(2) ~ &
+         +md
+            margin-top: 30px
+         &::after
+            +md
+               display: none
+         
+      &-img-wrap
+         flex: 0 0 160px
+         width: 160px
+         +cover-img
+         +xs
+            flex: 0 0 110px
+            width: auto
+      &-text
+         flex: 1
+         padding-left: 20px
+         +xs
+            padding-left: 15px
+      &-name
+         margin-bottom: 5px
+         letter-spacing: 1.2px
+         color: $color1
+      &-descr
+         color: $color3
+         line-height: 18px
+      &-info
+         font-size: 13px
+         color: $color6
+   &__text
+      max-width: 760px
+      margin: 0 auto 90px
+      text-align: center
+      color: $color2
+      &-title
+         margin-bottom: 15px
+         padding-left: 53px
+         +f('gp700')
+         font-size: 18px
+         letter-spacing: 1.35px
+         text-transform: uppercase
+         color: $color3
+         +xs
+            padding-left: 0
+   &__product
+      flex: 0 1 calc(33.33333% - 30px)
+      width: calc(33.33333% - 30px)
+      max-width: 350px
+      margin: 0 15px
+      +md
+         min-width: 350px
+      +xs
+         min-width: 0
+         width: 100%
+         flex: 0 1 auto
+         max-width: 390px
+      &:nth-child(2) ~ &
+         +md
+            margin-top: 80px
+      &:nth-child(1) ~ &
+         +xs
+            margin-top: 80px
+         
+   &__actions
+      margin-top: 50px
+      text-align: center
+      +xs
+         margin-top: 30px
+      &-btn
+         padding: 29px 35px 28px
+         +xs
+            padding: 16px 32px 15px
+            max-width: 290px
+            line-height: 20px
+
+// end choose //
+
+// *** begin about *** //
+.about
+   padding: 105px 0 110px
+   background-color: $color9
+   &__title
+      margin-bottom: 35px
+      +md
+         max-width: 470px
+      &::after
+         +xs
+            top: calc(50% - -1px)
+   &__container
+      display: flex
+      justify-content: flex-end
+   &__inner
+      max-width: 652px
+      +md
+         width: percentage(470 / 738)
+         max-width: none
+      +xs
+         width: 100%
+   &__descr
+      &-title
+      > *
+         &:not(:last-child)
+            margin-bottom: 8px
+// end about //
+
+// *** begin testimonials *** //
+.testimonials
+   position: relative
+   z-index: 2
+   padding: 103px 0 115px
+   background-image: radial-gradient(circle 960px at center, #42414b 0%, #25242e 100%)
+   +xs
+      padding: 40px 0 60px
+   &::after
+      +coverdiv
+      background-color: #3d3c47
+      opacity: .4
+      pointer-events: none
+      content: ''
+   &__bg
+      &-img
+         pointer-events: none
+         +coverdiv
+         +cover
+         opacity: 0.05
+        
+   &__title
+      margin-bottom: 55px
+   &__slider
+      +xs
+         padding-bottom: 30px
+      .slick-list
+         margin: 0 -15px
+      &-dots
+         margin-top: 46px
+   &__item
+      padding: 0 15px
+      &-content
+         position: relative
+         margin-bottom: 20px
+         min-height: 250px
+         padding: 35px 25px 35px 32px
+         background: #fff
+         +xs
+            min-height: 0
+         &::after
+            position: absolute
+            top: 100%
+            left: 0
+            +arr(19, 19, #fff, tr)
+            content: ''
+      &-user
+         display: flex
+         align-items: center
+         padding-left: 30px
+         &-info
+            font-size: 18px
+            line-height: 20px
+            color: $white
+         &-img
+            width: 60px
+            height: 60px
+            margin-right: 15px
+            border-radius: 50%
+            overflow: hidden
+            +cover-img
+            
+      &-text
+         color: $color2
+         font-size: 16px
+         line-height: 20px
+
+// end testimonials //
+
+
+// *** begin scheme *** //
+.scheme
+   &__inner
+      max-width: 1060px
+      +lg
+         width: percentage(960 / 1110)
+      +r(1439)
+         width: 72%
+      +xs
+         width: auto
+   &__title
+      margin-bottom: 45px
+   &__row
+      flex-wrap: wrap
+      counter-reset: schemeCount
+      +xs
+         flex-direction: column
+   &__item
+      position: relative
+      flex: 0 1 33.33333%
+      width: 33.33333%
+      padding: 0 15px
+      color: $color3
+      counter-increment: schemeCount
+      +r(1439)
+         flex: 0 1 50%
+         width: 50%
+         max-width: 330px
+      +xs
+         flex: 0 1 auto
+         width: 100%
+         margin: 0 auto
+         text-align: center
+      &::before
+         display: block
+         margin-bottom: 24px
+         color: $color1
+         height: 50px
+         +f('gp700', 60, 60)
+         letter-spacing: 1.72px
+         content: counter(schemeCount, decimal-leading-zero)
+         @supports (-webkit-background-clip: text)
+            background-image: linear-gradient(to top, #00afe1 0%, #3ae1ff 100%)
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+         +xs
+            display: inline-block
+            margin-bottom: 10px
+      &:nth-child(1) ~ &
+         +xs
+            margin-top: 30px
+      &:nth-child(2) ~ &
+         +r(1439)
+            margin-top: 30px
+      &:nth-child(3) ~ &
+         margin-top: 30px
+      &-arr
+         position: absolute
+         top: 30px
+         left: 125px
+         width: 130px
+         height: 1px
+         background-color: #e1e1e1
+         +r(1439)
+            width: 70px
+         +xs
+            display: none
+         &::after
+            position: absolute
+            right: -3px
+            top: calc(50% - 4px)
+            +arr(6, 8, #e1e1e1, r)
+            content: ''
+         
+      &-title
+         margin-bottom: 8px
+         +f('gp500', 18)
+// end scheme //
+
+// *** begin shares *** //
+.shares
+   background-color: $color8
+   &__title
+      margin-bottom: 52px
+   &__row
+      margin: 0 -5px
+      flex-wrap: wrap
+      +xs
+         flex-direction: column
+   &__card
+      position: relative
+      display: flex
+      align-items: center
+      justify-content: center
+      flex: 1 1 calc(50% - 10px)
+      margin: 0 5px 10px
+      padding: 30px
+      height: 260px
+      +cover
+      +xs
+         height: 240px
+         padding: 20px
+      &::after
+         +coverdiv
+         background-color: rgba(#25242e, .9)
+         content: ''
+      &-content
+         z-index: 1
+         text-align: center
+      &-title
+         margin-bottom: 30px
+         color: $color8
+         font-size: 17px
+         letter-spacing: 1.27px
+         +xs
+            margin-bottom: 20px
+            font-size: 16px
+            letter-spacing: 1px
+      &-date
+         position: relative
+         display: inline-flex
+         align-items: center
+         padding: 8px 10px
+         min-width: 135px
+         text-align: center
+         font-size: 14px
+         color: $color1
+         box-shadow: 0 12px 17px 1px rgba(9, 21, 40, 0.2)
+         &-icon
+            margin-right: 9px
+            color: $color1
+            font-size: 14px
+// end shares //
+
+// *** begin video-section *** //
+.video-section
+   position: relative
+   height: 550px
+   overflow: hidden
+   +xs
+      height: 300px
+   &__container
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      height: 100%
+      max-width: 800px
+      text-align: center
+      transition: .3s ease-in-out
+      .is-active &
+         opacity: 0
+         pointer-events: none
+         transform: translateY(50px)
+         
+   &__title
+      color: $white
+      +f('gp300', 24, 38)
+      +xs
+         font-size: 20px
+         line-height: 26px
+   
+   &__play-btn
+      position: relative
+      width: 98px
+      height: 98px
+      margin-bottom: 30px
+      transition: .3s ease-in-out
+      +xs
+         margin-bottom: 0
+         transform: scale(.8)
+      &:hover
+         transform: scale(.85)
+      &-icon
+         position: absolute
+         top: 33px
+         left: 29px
+      &-circle
+      
+   &__poster
+      pointer-events: none
+      +coverdiv
+      z-index: 1
+      +cover
+      transition: .3s ease-in-out
+      .is-active &
+         opacity: 0
+      &::after
+         +coverdiv
+         background-color: $color11
+         opacity: .8
+         content: ''
+   video
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      left: 0
+      width: 100%
+      height: 100%
+      object-fit: cover
+      font-family: 'object-fit: cover;'
+      
+// end video-section //

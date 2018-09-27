@@ -1,0 +1,44 @@
+mixin popup(el)
+	case el.name
+
+		when 'thanks-popup'
+			+b.popup(data-popup-id='thanks-popup', tabindex='-1', role='dialog')
+				+e.container._xs
+					+e.close.js-popup-close: +i('close')
+					+b.contact-form.thanks-popup
+						+e.H5.title.title Спасибо!
+						+e.P Наш менеджер свяжется с Вами в ближайшее время
+						+b.BUTTON.thanks-popup__btn(data-popup-target='thanks-popup' type='button')
+
+		when 'contact-popup'
+			+b.popup(data-popup-id='contact-popup', tabindex='-1', role='dialog')
+				+e.container._xs
+					+e.close.js-popup-close: +svg('close')
+					+b.contact-form
+						+e.top-text
+							+e.H3.title.title-sm Оставьте контакты
+							+e.P И мы свяжемся с Вами в ближайшее время
+						+e.FORM.form.js-form(action='#!' method='POST')
+							+b.form-field.contact-form__field
+								label
+									+e.INPUT.input.js-input(type='text' name='' placeholder='Имя и Фамилия' required)
+									+e.icon
+										+i('account')
+							+b.form-field.contact-form__field
+								label
+									+e.INPUT.input.js-input.js-tel-input(type='text' name='' placeholder='Ваш телефон' required)
+									+e.icon
+										+i('phone')
+							+b.form-field.contact-form__field
+								label
+									+e.INPUT.input.js-input(type='text' name='' placeholder='Ваш e-mail' required)
+									+e.icon
+										+i('email')
+							+b.form-field.contact-form__field
+								label
+									+e.INPUT.input.js-input(type='text' name='' placeholder='Ваш город' required)
+									+e.icon
+										+i('pin')
+
+							+e.BUTTON.submit-btn.btn(type='submit'): span Отправить
+							+checkBox('contact-form__agree', 'Нажимая на кнопку "Отправить", я принимаю условия Политики конфиденциальности')

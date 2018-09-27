@@ -1,0 +1,18 @@
+mixin btn(btn)
+	case btn.type
+		when 'a'
+			+b.A.btn(class= btn.classMod href='#!')
+				span= btn.text
+		when 'b'
+			+b.BUTTON.btn(class= btn.classMod type='button' data-popup-target= btn.popup)&attributes(attributes)
+				span= btn.text
+
+mixin checkBox(classMod, text, radio)
+	+b.check-box(class= classMod)
+		+e.LABEL.label
+			if radio
+				+e.INPUT.input(type='radio' name='radio')&attributes(attributes)
+			else
+				+e.INPUT.input(type='checkbox' name='')&attributes(attributes)
+			+e.square: +i('check', 'check-box__icon')
+			+e.SPAN.text= text

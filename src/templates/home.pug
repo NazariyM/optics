@@ -1,0 +1,511 @@
+extends layouts/_layout
+
+block variables
+	-title = 'Главная'
+
+block content
+
+	//begin main
+	main.main
+
+		//begin screen
+		+b.SECTION.screen
+			+e.container.container
+				+e.img-wrap
+					+e.IMG(src='img/content/screen_img.png' alt='image')
+					+e.img-label сделано в США
+
+				+b.decor-text-bg.screen__decor-text
+
+				+e.text
+					+e.H1.title.title._white
+						span 100%
+						| Индивидуальные бинокулярные лупы
+					+b.H5.title-sm._grad.screen__sub-title Высочайшее качество из США
+				+e.award-img
+					+e.IMG(src='img/other/award-logo.png' alt='Cellerant Best Of Class Technology Award')
+		//end screen
+
+		//begin advantages
+		+b.SECTION.advantages#advantages.section
+			+e.container.container
+				+e.H2.title.title._left Основные преимущества
+				+b.decor-text-bg.advantages__decor-text
+
+				+e.block
+					+e.list
+						+e.list-item
+							span Титановая оправа
+							+e.line._1
+								+e.SVG.line-el(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 759 23', style='enable-background:new 0 0 759 23;', xml:space='preserve')
+									style(type='text/css').
+										.st1 {
+											stroke: url(#adv-line-1);
+										}
+									lineargradient#adv-line-1(gradientUnits='userSpaceOnUse', x1='0.9974', y1='11.4987', x2='759', y2='11.4987')
+										stop(offset='0', style='stop-color:#FFFFFF')
+										stop(offset='5.600059e-02', style='stop-color:#EFFAFD')
+										stop(offset='0.3142', style='stop-color:#A9E5F6')
+										stop(offset='0.5468', style='stop-color:#72D5F0')
+										stop(offset='0.7458', style='stop-color:#4AC9EC')
+										stop(offset='0.9035', style='stop-color:#32C2E9')
+										stop(offset='1', style='stop-color:#29BFE8')
+									polyline.st1.adv-line(points='758,22.5 758,1.5 1,3.5 ')
+
+								+e.SVG.line-el(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 759 23', style='enable-background:new 0 0 759 23;', xml:space='preserve')
+									lineargradient#adv-line-1(gradientUnits='userSpaceOnUse', x1='0.9974', y1='11.4987', x2='759', y2='11.4987')
+										stop(offset='0', style='stop-color:#fff')
+										stop(offset='1', style='stop-color:#00afe1')
+									polyline.st1.js-adv-line(points='1,3.5 758,1.5 758,22.5')
+
+						+e.list-item
+							span Противозапотевающие линзы
+							+e.line._2
+								+e.SVG.line-el(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 374 2', style='enable-background:new 0 0 374 2;', xml:space='preserve')
+									style(type='text/css').
+										.st2 {
+											stroke: url(#adv-line-2);
+										}
+									g
+										lineargradient#adv-line-2(gradientUnits='userSpaceOnUse', x1='1', y1='1', x2='374', y2='1')
+											stop(offset='0', style='stop-color:#FFFFFF')
+											stop(offset='5.600059e-02', style='stop-color:#EFFAFD')
+											stop(offset='0.3142', style='stop-color:#A9E5F6')
+											stop(offset='0.5468', style='stop-color:#72D5F0')
+											stop(offset='0.7458', style='stop-color:#4AC9EC')
+											stop(offset='0.9035', style='stop-color:#32C2E9')
+											stop(offset='1', style='stop-color:#29BFE8')
+										line.st2.adv-line(x1='1', y1='1', x2='374', y2='1')
+
+								+e.SVG.line-el(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 374 2', style='enable-background:new 0 0 374 2;', xml:space='preserve')
+									style(type='text/css').
+										.st2 {
+											stroke: url(#adv-line-2);
+										}
+									lineargradient#adv-line-2(gradientUnits='userSpaceOnUse', x1='0.9974', y1='11.4987', x2='759', y2='11.4987')
+										stop(offset='0', style='stop-color:#fff')
+										stop(offset='1', style='stop-color:#00afe1')
+									line.st2.js-adv-line(x1='1', y1='1', x2='374', y2='1')
+
+
+						+e.list-item
+							span Мягкий силиконовый наносик
+							+e.line._3
+								+e.SVG.line-el(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 553 14', style='enable-background:new 0 0 553 14;', xml:space='preserve')
+									style(type='text/css').
+										.st3 {
+											stroke: url(#adv-line-3);
+										}
+									lineargradient#adv-line-3(gradientUnits='userSpaceOnUse', x1='0', y1='11.0018', x2='553.0036', y2='11.0018')
+										stop(offset='0', style='stop-color:#FFFFFF')
+										stop(offset='5.600059e-02', style='stop-color:#EFFAFD')
+										stop(offset='0.3142', style='stop-color:#A9E5F6')
+										stop(offset='0.5468', style='stop-color:#72D5F0')
+										stop(offset='0.7458', style='stop-color:#4AC9EC')
+										stop(offset='0.9035', style='stop-color:#32C2E9')
+										stop(offset='1', style='stop-color:#29BFE8')
+									polyline.st3.adv-line(points='0,3 552,1 552,14 ')
+
+								+e.SVG.line-el(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 553 14', style='enable-background:new 0 0 553 14;', xml:space='preserve')
+									polyline.st3.js-adv-line(points='0,3 552,1 552,14 ')
+
+						+e.list-item
+							span 100% персонализация, благодаря технологии
+								strong True-Fit
+							+e.line._4
+								+e.SVG.line-el(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 196 2', style='enable-background:new 0 0 196 2;', xml:space='preserve')
+									style(type='text/css').
+										.st4 {
+											stroke: url(#adv-line-4);
+										}
+									g
+										lineargradient#adv-line-4(gradientUnits='userSpaceOnUse', x1='1', y1='1', x2='374', y2='1')
+											stop(offset='0', style='stop-color:#FFFFFF')
+											stop(offset='5.600059e-02', style='stop-color:#EFFAFD')
+											stop(offset='0.3142', style='stop-color:#A9E5F6')
+											stop(offset='0.5468', style='stop-color:#72D5F0')
+											stop(offset='0.7458', style='stop-color:#4AC9EC')
+											stop(offset='0.9035', style='stop-color:#32C2E9')
+											stop(offset='1', style='stop-color:#29BFE8')
+										line.st4.adv-line(x1='1', y1='1', x2='374', y2='1')
+
+								+e.SVG.line-el(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 196 2', style='enable-background:new 0 0 196 2;', xml:space='preserve')
+									line.st4.js-adv-line(x1='1', y1='1', x2='374', y2='1')
+
+						+e.list-item
+							span Небликуюющее покрытие, устойчивое к царапинам
+							+e.line._5
+								+e.SVG.line-el(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 166 27', style='enable-background:new 0 0 166 27;', xml:space='preserve')
+									style(type='text/css').
+										.st5 {
+											stroke: url(#adv-line-5);
+										}
+									lineargradient#adv-line-5(gradientUnits='userSpaceOnUse', x1='0', y1='13.4999', x2='166', y2='13.4999')
+										stop(offset='0', style='stop-color:#FFFFFF')
+										stop(offset='1', style='stop-color:#00afe1')
+									path.st5.adv-line(d='M165,27c0,0,0-21.1,0-26C151.2,1,0,1,0,1')
+								+e.SVG.line-el(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 166 27', style='enable-background:new 0 0 166 27;', xml:space='preserve')
+									path.st5.js-adv-line(d="M0,1c0,0,151.2,0,165,0c0,4.9,0,26,0,26")
+
+						+e.list-item
+							span Водонепроницаемые
+							+e.line._6
+								+e.SVG.line-el(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 700 15', style='enable-background:new 0 0 700 15;', xml:space='preserve')
+									style(type='text/css').
+										.st6 {
+											stroke: url(#adv-line-6);
+										}
+									lineargradient#adv-line-6(gradientUnits='userSpaceOnUse', x1='0', y1='8.75', x2='700', y2='8.75')
+										stop(offset='0', style='stop-color:#FFFFFF')
+										stop(offset='5.600059e-02', style='stop-color:#EFFAFD')
+										stop(offset='0.3142', style='stop-color:#A9E5F6')
+										stop(offset='0.5468', style='stop-color:#72D5F0')
+										stop(offset='0.7458', style='stop-color:#4AC9EC')
+										stop(offset='0.9035', style='stop-color:#32C2E9')
+										stop(offset='1', style='stop-color:#29BFE8')
+									path.st6.adv-line(d='M699,17.5v-16c0,0,0-0.2,0-0.5C669.6,1,0,1,0,1')
+								+e.SVG.line-el(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 700 15', style='enable-background:new 0 0 700 15;', xml:space='preserve')
+									lineargradient#adv-line-6(gradientUnits='userSpaceOnUse', x1='0', y1='8.75', x2='700', y2='8.75')
+										stop(offset='0', style='stop-color:#FFFFFF')
+										stop(offset='1', style='stop-color:#00afe1')
+									path.st6.js-adv-line(d="M0,1c0,0,669.6,0,699,0c0,0.3,0,0.5,0,0.5v16")
+
+						+e.list-item
+							span Противоударные
+							+e.line._7
+								+e.SVG.line-el(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 950 101.2', style='enable-background:new 0 0 950 101.2;', xml:space='preserve')
+									style(type='text/css').
+										.st7 {
+											stroke: url(#adv-line-7);
+										}
+									lineargradient#adv-line-7(gradientUnits='userSpaceOnUse', x1='0.2383', y1='48.9923', x2='950.2274', y2='53.5082')
+										stop(offset='0', style='stop-color:#FFFFFF')
+										stop(offset='5.600059e-02', style='stop-color:#EFFAFD')
+										stop(offset='0.3142', style='stop-color:#A9E5F6')
+										stop(offset='0.5468', style='stop-color:#72D5F0')
+										stop(offset='0.7458', style='stop-color:#4AC9EC')
+										stop(offset='0.9035', style='stop-color:#32C2E9')
+										stop(offset='1', style='stop-color:#29BFE8')
+									path.st7.adv-line(d='M949,1.2v98c0,0,0,0.4,0,1c-34.5,0-949,0-949,0')
+								+e.SVG.line-el(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 950 101.2', style='enable-background:new 0 0 950 101.2;', xml:space='preserve')
+									path.st7.js-adv-line(d="M0,100.2c0,0,914.5,0,949,0c0-0.6,0-1,0-1v-98")
+
+					+e.view
+						+e.view-img
+							+e.IMG(src='img/content/advantages_img.png' alt='image')
+
+						-plus = 0
+						while plus < 7
+							+e.view-plus(class= `_${plus + 1}`)
+								i +
+								i= `${plus + 1}`
+								span
+							-plus++
+			+b.side-block._gray._advantages
+				+e.bg(style='background-image: url(img/bg/surgeon_2.jpg)')
+		//end advantages
+			
+		//begin info
+		+b.SECTION.info.section
+			+b.side-block._gray._info
+				+e.bg(style='background-image: url(img/bg/surgeon_2.jpg)')
+				+e.IMG.img(src='img/bg/lamp.png' alt='image')
+
+			+e.container.container
+				+e.inner
+					+e.H2.title.title._left Налобные осветители
+					+e.descr
+						+e.H5.descr-title.title-sm._blue Светодиодные осветители Radiant™
+							span (вес – 6,5 гр)
+						+e.descr-text
+							+e.P Портативная осветительная светодиодная система Radiant™ обеспечивает максимальную яркость в сочетании с продолжительной работой, благодаря питанию от переносной батареи высокой емкости.
+							+e.P Светодиодные осветители Radiant™ - компактные, легковесные, быстро
+								br
+								| и легко отстегиваются, подходят к бинокулярам практически любого производителя (с помощью специальных переходников).
+
+					+e.block.grad-border
+						.grad-border__lines
+						+e.block-top
+							+e.block-graph
+								+e.block-graph-val
+									+e.DIV 100%
+									+e.DIV 80%
+									+e.DIV 60%
+									+e.DIV 40%
+									+e.DIV 20%
+									+e.DIV 0%
+								+e.block-graph-body
+
+							+e.block-text
+								+e.H5.block-title.title-sm Фильтрация синей области спектра
+								+e.P Уровень допустимого синего спектра в 33 раза меньше, чем безопасный уровень, опубликованный Американским Обществом Промышленных Гигиенистов (ACGIH - организация по стандартизации и техническому регулированию).
+								+e.block-scale 3,2%
+
+						+e.block-bot
+							+e.block-hint._blue Допустимый уровень синего цвета
+							+e.block-hint._pink Уровень синего цвета RadiantTM
+
+				+b.decor-text-bg.info__decor-text
+		//end info
+			
+		//begin choose
+		+b.SECTION.choose#choose.section
+			+e.container.container
+				+e.H2.title.title._center Выберите свой Q-Optics
+				+e.top-row.row
+					+e.A.item(href='#!')
+						+e.item-img-wrap
+							+e.IMG(src='img/content/choose-sm_1.png' alt='image')
+						+e.item-text
+							+e.H6.item-name.title-sm М 2,5-3,5
+							+e.P.item-descr Суперлегкие индивидуальные лупы
+							+e.P.item-info увеличение 2,5Х – 3,5Х
+					+e.A.item(href='#!')
+						+e.item-img-wrap
+							+e.IMG(src='img/content/choose-sm_2.png' alt='image')
+						+e.item-text
+							+e.H6.item-name.title-sm HD 2.5
+							+e.P.item-descr Лупы высокого разрешения
+							+e.P.item-info увеличение 2,5Х
+					+e.A.item(href='#!')
+						+e.item-img-wrap
+							+e.IMG(src='img/content/choose-sm_3.png' alt='image')
+						+e.item-text
+							+e.H6.item-name.title-sm Призма
+							+e.P.item-descr Индивидуальные призматические лупы
+							+e.P.item-info увеличение 3,5Х – 4,5Х
+
+				+e.text
+					+e.H5.text-title Суперлегкие индивидуальные лупы
+					p В суперлегких лупах используется специальный метод расположения линз для устранения оптических искажений и значительного снижения веса.
+
+				+e.product-row.row
+					+b.product-item.choose__product
+						+e.img-wrap
+							+e.IMG(src='img/content/choose-lg_1.png' alt='image')
+						+e.H5.name M-2.5 TTL
+						+e.info
+							+e.info-row
+								+e.info-col Увеличение
+								+e.info-col 2.5Х
+							+e.info-row
+								+e.info-col Рабочая дистанция
+								+e.info-col 25-66 см индивидуально
+							+e.info-row
+								+e.info-col Поле зрения
+								+e.info-col 7-10 см
+							+e.info-row
+								+e.info-col Вес
+								+e.info-col 38.0 гр.
+							+e.info-row
+								+e.info-col Цвета оправы
+								+e.info-col._colors
+									-color = 0
+									while color < 11
+										+e.info-color(class= `_${color + 1}`)
+										-color++
+						+e.label гарантия - 10 лет
+
+					+b.product-item.choose__product
+						+e.img-wrap
+							+e.IMG(src='img/content/choose-lg_2.png' alt='image')
+						+e.H5.name M-3.0 TTL
+						+e.info
+							+e.info-row
+								+e.info-col Увеличение
+								+e.info-col 3.0X
+							+e.info-row
+								+e.info-col Рабочая дистанция
+								+e.info-col 25-66 см индивидуально
+							+e.info-row
+								+e.info-col Поле зрения
+								+e.info-col 7-10 см
+							+e.info-row
+								+e.info-col Вес
+								+e.info-col 38.0 гр.
+							+e.info-row
+								+e.info-col Цвета оправы
+								+e.info-col._colors
+									-color = 0
+									while color < 11
+										+e.info-color(class= `_${color + 1}`)
+										-color++
+						+e.label гарантия - 10 лет
+
+					+b.product-item.choose__product
+						+e.img-wrap
+							+e.IMG(src='img/content/choose-lg_1.png' alt='image')
+						+e.H5.name M-3.5 TTL
+						+e.info
+							+e.info-row
+								+e.info-col Увеличение
+								+e.info-col 3.5X
+							+e.info-row
+								+e.info-col Рабочая дистанция
+								+e.info-col 25-66 см индивидуально
+							+e.info-row
+								+e.info-col Поле зрения
+								+e.info-col 7-10 см
+							+e.info-row
+								+e.info-col Вес
+								+e.info-col 38.0 гр.
+							+e.info-row
+								+e.info-col Цвета оправы
+								+e.info-col._colors
+									-color = 0
+									while color < 11
+										+e.info-color(class= `_${color + 1}`)
+										-color++
+						+e.label гарантия - 10 лет
+				+e.actions
+					+e.BUTTON.actions-btn.btn(data-popup-target='contact-popup'): span Вызвать специалиста к себе в клинику
+		//end choose
+
+		//begin about
+		+b.SECTION.about.section
+			+b.side-block._white._about
+				+e.bg(style='background-image: url(img/bg/surgeon_3.jpg)')
+				+e.IMG.img(src='img/bg/loupes.png' alt='image')
+
+			+e.container.container
+				+e.inner
+					+e.H2.title.title._left О компании
+					+e.descr
+						+e.H5.descr-title.title-sm._blue Индивидуальные бинокулярные лупы Q-Optics системы TTL
+							span («сквозь линзу»)
+							p — делаются с идеальной точностью под особенности лица конкретного пользователя. Наша запатентованная система цифровых замеров True-Fit™ выводит персонализацию и регулировку луп на новый уровень.
+						p Цифровые измерения делают традиционные замеры более точными и добавляют совершенно новые параметры для оптимального размещения лупы.
+						p Рабочие расстояния устанавливается с точностью до сантиметра, так что каждая лупа соответствует нормальной рабочей позиции пользователя, не заставляя его приспосабливаться к фокусным расстоянием вне привычной рабочей дистанции. Все рабочие расстояния (25-66 см) замеряются индивидуально для каждого человека.
+						p Встроенные в титановую оправу, лупы Q-Optics прослужат вам многие годы.
+		//end about
+
+		//begin testimonials
+		+b.SECTION.testimonials.section
+			+e.bg-img(style='background-image: url(img/bg/surgeon_4.jpg)')
+			+e.container.container
+				+e.H2.title.title._center._white Отзывы о продукте
+
+				+e.slider.slider.js-testimonials-slider
+					-i = 0
+					while i < 4
+						+e.item
+							+e.item-content
+								+e.P.item-text Beware of counterfeit products trading off of the valuable goodwill of the WACACO® brand.  Like many companies that have expended years and enormous resources in carefully developing brand recognition.
+							+e.item-user
+								+e.item-user-img
+									+e.IMG(src='img/content/client-1.jpg' alt='image')
+								+e.H6.item-user-info Анастасия,
+									span г. Москва
+						+e.item
+							+e.item-content
+								+e.P.item-text Like many companies that have expended years and enormous resources in carefully developing brand recognition, Wacaco products are being unlawfully imitated and sold at inferior quality through unauthorized channels, and usually at drastically reduced prices.
+							+e.item-user
+								+e.item-user-img
+									+e.IMG(src='img/content/client-2.jpg' alt='image')
+								+e.H6.item-user-info Ксюша,
+									span г. Москва
+						+e.item
+							+e.item-content
+								+e.P.item-text Enormous resources in carefully developing brand recognition, Wacaco products are being unlawfully imitated and sold at inferior quality through unauthorized channels, and usually at drastically reduced prices.
+							+e.item-user
+								+e.item-user-img
+									+e.IMG(src='img/content/client-3.jpg' alt='image')
+								+e.H6.item-user-info Александр,
+									span г. Москва
+						-i++
+		//end testimonials
+
+		//begin scheme
+		+b.SECTION.scheme.section
+			+e.container.container
+				+e.H2.title.title._center Схема работы с нами
+				+e.inner
+					+e.row.row
+						+e.item
+							+e.item-arr
+							+e.H6.item-title Выезд специалиста в клинику
+							p и снятие замеров – 30 минут
+						+e.item
+							+e.item-arr
+							+e.H6.item-title Предоплата 50%
+							p и отправка заказа на производство
+						+e.item
+							+e.item-arr
+							+e.H6.item-title Производство
+							p и доставка – 5-7 недель
+						+e.item
+							+e.item-arr
+							+e.H6.item-title Получение оптики
+							p и оплата второй части
+						+e.item
+							+e.H6.item-title Вручение оптики доктору
+
+			+b.side-block._white._scheme
+				+e.bg(style='background-image: url(img/bg/surgeon_5.jpg)')
+				+e.IMG.img(src='img/bg/loupes-2.png' alt='image')
+		//end scheme
+			
+		//begin shares
+		+b.SECTION.shares#shares.section
+			+e.container.container
+				+e.H2.title.title._center Предложения и акции
+				+e.row.row
+					+e.A.card(href='#!' style='background-image: url(img/bg/shares_1.jpg)')
+						+e.card-content
+							+e.H5.card-title.title-sm Примеры поля зрения при различных рабочих расстояниях
+							+e.DIV.card-date.grad-border
+								.grad-border__lines
+								+i('calendar', 'shares__card-date-icon')
+								span 10 сент. 2018
+
+					+e.A.card(href='#!' style='background-image: url(img/bg/shares_2.jpg)')
+						+e.card-content
+							+e.H5.card-title.title-sm Проверка настроек бинокулярной лупы
+							+e.DIV.card-date.grad-border
+								.grad-border__lines
+								+i('calendar', 'shares__card-date-icon')
+								span 10 сент. 2018
+
+					+e.A.card(href='#!' style='background-image: url(img/bg/shares_3.jpg)')
+						+e.card-content
+							+e.H5.card-title.title-sm Примеры поля зрения при различных  рабочих расстояниях
+							+e.DIV.card-date.grad-border
+								.grad-border__lines
+								+i('calendar', 'shares__card-date-icon')
+								span 10 сент. 2018
+		//end shares
+			
+		//begin video-section
+		+b.SECTION.video-section.js-video-block
+			+e.poster(style='background-image: url(img/bg/video-poster.jpg)')
+			+e.container.container
+				+e.BUTTON.play-btn
+					+e.SVG.play-btn-circle(width='98', height='98')
+							defs
+								lineargradient#circle-grad(x1='0', y1='1', x2='1', y2='0')
+									stop(offset='0', stop-color='#00afe1')
+									stop(offset='1', stop-color='#3ae1ff')
+							g(fill='none')
+								circle(cx='50', cy='50', r='45', stroke='url(#circle-grad)', stroke-width='2')
+
+					+e.SVG.play-btn-icon(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='49', height='60', viewBox='0 0 49 60')
+							defs
+								path#96xca(d='M952 6606.79l21.21 16.2-21.21 16.22')
+								filter#96xcb(width='78.4', height='102', x='923.6', y='6578', filterUnits='userSpaceOnUse')
+									feoffset(dx='-.4', dy='12', in='SourceGraphic', result='FeOffset1022Out')
+									fegaussianblur(in='FeOffset1022Out', result='FeGaussianBlur1023Out', stdDeviation='6.840000000000001 6.840000000000001')
+								lineargradient#96xcc(x1='962.21', x2='963', y1='6639.21', y2='6606.79', gradientUnits='userSpaceOnUse')
+									stop(offset='0', stop-color='#00afe1')
+									stop(offset='1', stop-color='#3ae1ff')
+							g
+								g(transform='translate(-937 -6605)')
+									g(filter='url(#96xcb)')
+										use(fill='none', stroke-opacity='.2', stroke-width='-3.4e+38', xlink:href='#96xca')
+									use(fill='#fff', xlink:href='#96xca')
+									use(fill='url(#96xcc)', xlink:href='#96xca')
+
+				+e.H6.title Q-Optics - оптика нового поколения
+			video(playsinline='playsinline', loop='loop', preload='auto')
+				source(src='data/video-sample.mp4', type='video/mp4')
+		//end video-section
+	//end main

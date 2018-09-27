@@ -1,0 +1,21 @@
+//begin footer
++b.FOOTER.footer
+	+e.container.container
+		+e.col
+			+e.A.logo.logo(href='#!')
+				+e.IMG(src='img/other/logo.png' alt='Q-Optics')
+			+b.socials.footer__socials
+				+e.A(href='#!' target='_blank'): +i('facebook')
+				+e.A(href='#!' target='_blank'): +i('vk')
+				+e.A(href='#!' target='_blank'): +i('twitter')
+				+e.A(href='#!' target='_blank'): +i('youtube-play')
+		+e.col
+			+b.subscribe.footer__subscribe
+				+e.H6.title Подпишитесь на наши новости:
+				+e.FORM.form(action='#!' method='POST')
+					+e.form-field
+						+e.form-field-icon
+							+i('email')
+						+e.INPUT.form-field-input(type='text' name='' placeholder='Ваш e-mail' required)
+						+e.BUTTON.form-btn.btn(type='submit'): span Подписаться
+//end footer

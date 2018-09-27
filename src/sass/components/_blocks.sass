@@ -1,0 +1,302 @@
+// *** begin logo *** //
+.logo
+   display: block
+   +cover-img
+// end logo //
+// *** begin contact-block *** //
+.contact-block
+   display: flex
+   align-items: center
+   &__item
+      margin-right: 27px
+      color: $color13
+      transition: .3s ease-in-out
+      +xs
+         display: none
+      &:hover
+         color: $color1
+      &-icon
+         margin-right: 8px
+         color: #51c5eb
+         font-size: 16px
+         @supports (-webkit-background-clip: text)
+            background-image: linear-gradient(to top, #00afe1 0%, #3ae1ff 100%)
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+            
+   &__socials
+      display: flex
+      align-items: center
+      a
+         position: relative
+         width: 30px
+         height: 30px
+         border-radius: 50%
+         color: $color14
+         line-height: 1
+         &:hover
+            &::after
+               opacity: 1
+         &::after
+            +coverdiv
+            background-image: linear-gradient(to top, #00afe1 0%, #3ae1ff 100%)
+            opacity: 0.4
+            border-radius: 50%
+            transition: .3s ease-in-out
+            content: ''
+         &:not(:last-child)
+            margin-right: 5px
+         span
+            position: absolute
+            top: 1px
+            left: 1px
+            right: 1px
+            bottom: 1px
+            z-index: 1
+            +flexCenter
+            border-radius: 50%
+            background: #31313b
+         svg
+            font-size: 14px
+            fill: $color14
+// end contact-block //
+
+// *** begin side-block *** //
+.side-block
+   $parent: &
+   position: absolute
+   top: 0
+   left: 0
+   height: 100%
+   +xs
+      display: none
+   &_gray
+      background-color: #3d3c47
+      &::after
+         background-color: rgba($color10, .4)
+   &_white
+      background-color: $color8
+      &::after
+         background-color: rgba($color9, .4)
+   &_advantages
+      left: auto
+      right: 0
+      width: percentage(690 / 1920)
+      +md
+         width: 33%
+   &_info
+      width: percentage(690 / 1920)
+   &_about
+      width: percentage(581 / 1920)
+      +md
+         width: 34.5%
+   &_scheme
+      left: auto
+      right: 0
+      width: percentage(470 / 1920)
+      +r(1439)
+         width: 35%
+   &::after
+      +coverdiv
+      z-index: 1
+      content: ''
+   &__bg
+      +coverdiv
+      +cover
+      opacity: 0.06
+   &__img
+      position: absolute
+      z-index: 2
+      #{$parent}_info &
+         top: 16%
+         left: -70px
+         min-width: 128%
+      #{$parent}_about &
+         top: 21%
+         left: -4%
+         min-width: 148%
+         +md
+            left: -34%
+      #{$parent}_scheme &
+         right: -24%
+         bottom: -18%
+         min-width: 185%
+         +lg
+            right: -5%
+         +r(1439)
+            bottom: -10%
+// end side-block //
+
+// *** begin socials *** //
+.socials
+   display: flex
+   align-items: center
+   line-height: 1
+   a
+      color: $color4
+      transition: .3s ease-in-out
+      &:not(:last-child)
+         margin-right: 20px
+      &:hover
+         color: $color1
+      .zmdi
+         font-size: 20px
+// end socials //
+
+// *** begin subscribe *** //
+.subscribe
+   &__title
+      margin-bottom: 15px
+      padding-left: 10px
+      color: #c5c4d2
+      +xs
+         margin-bottom: 10px
+         text-align: center
+   &__form
+      &-field
+         position: relative
+         +xs
+            display: flex
+            flex-direction: column
+         &-icon
+            position: absolute
+            top: 0
+            left: 0
+            width: 50px
+            height: 65px
+            display: flex
+            align-items: center
+            justify-content: flex-end
+            padding-right: 10px
+         .zmdi
+            color: #51c5eb
+            font-size: 14px
+            @supports (-webkit-background-clip: text)
+               background-image: linear-gradient(to top, #00afe1 0%, #3ae1ff 100%)
+               -webkit-background-clip: text
+               -webkit-text-fill-color: transparent
+         &-input
+            width: 100%
+            height: 65px
+            padding: 0 200px 0 56px
+            +f('gp300', 14)
+            border-radius: 33px
+            border: 1px solid rgba($white, .1)
+            background: transparent
+            color: $white
+            +placeholder-color($color5)
+            +xs
+               padding: 0 30px 0 56px
+               margin-bottom: 15px
+      &-btn
+         position: absolute
+         height: 55px
+         width: 176px
+         padding: 0
+         line-height: 57px
+         top: calc(50% - 27.5px)
+         right: 5px
+         +xs
+            position: relative
+            top: auto
+            right: auto
+            width: 100%
+// end subscribe //
+
+// *** begin product *** //
+.product-item
+   padding: 0 26px 48px 30px
+   box-shadow: 0 25px 40px rgba(23, 22, 28, 0.06)
+   background-color: #ffffff
+   +xs
+      padding: 0 15px 25px 15px
+   &__img-wrap
+      display: flex
+      align-items: flex-end
+      height: 210px
+      margin: -130px -20px 40px
+      pointer-events: none
+      +xs
+         margin: -130px -20px 20px
+   &__name
+      margin-bottom: 25px
+      text-align: center
+      +f('gp700', 18)
+      letter-spacing: 1.35px
+      color: $color1
+   &__info
+      margin-bottom: 13px
+      font-size: 14px
+      &-row
+         display: flex
+         align-items: flex-start
+         margin: 0 -15px
+         +xs
+            margin: 0 -5px
+         &:not(:last-child)
+            margin-bottom: 8px
+      &-col
+         padding: 0 15px
+         line-height: 18px
+         +xs
+            padding: 0 5px
+         &:nth-child(1)
+            flex: 0 1 53%
+            width: 53%
+            color: $color3
+            +xs
+               flex: 0 1 50%
+               width: 50%
+         &:nth-child(2)
+            flex: 0 1 47%
+            width: 47%
+            color: $color6
+            +xs
+               flex: 0 1 50%
+               width: 50%
+         &_colors
+            font-size: 0
+            line-height: 0
+            letter-spacing: 0
+            +xs
+               max-width: 145px
+      &-color
+         display: inline-block
+         width: 15px
+         height: 15px
+         border-radius: 50%
+         &:nth-child(6) ~ &
+            margin-top: 6px
+            
+         &:not(:nth-child(6n))
+            margin-right: 6px
+         &_1
+            background-color: #57373c
+         &_2
+            background-color: #637cbb
+         &_3
+            background-color: #c73d45
+         &_4
+            background-color: #ce7b59
+         &_5
+            background-color: #c6b3a5
+         &_6
+            background-color: #c4aed4
+         &_7
+            background-color: #ed61a0
+         &_8
+            background-color: #ddaac5
+         &_9
+            background-color: #2f3037
+         &_10
+            background-color: #5d585e
+         &_11
+            background-color: #eae9ee
+   &__label
+      display: inline-block
+      color: $color3
+      letter-spacing: 1px
+      border-bottom: 1px solid rgba($color3, .5)
+      text-transform: uppercase
+      +f('gp500', 14, 14)
+// end product //

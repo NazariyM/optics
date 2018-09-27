@@ -1,0 +1,70 @@
+.slider
+   display: none
+   &.slick-initialized
+      display: block
+   
+.slider-dots
+   $parent: &
+   display: flex
+   justify-content: center
+   line-height: 0
+   li
+      &:not(:last-child)
+         margin-right: 16px
+      &.slick-active
+         button
+            pointer-events: none
+            background-color: $white
+            &::before
+               opacity: 1
+      button
+         position: relative
+         width: 10px
+         height: 10px
+         border-radius: 50%
+         +hide-text
+         transition: .3s ease-in-out
+         background: rgba($white, .5)
+         &::before
+            position: absolute
+            border: 1px solid rgba($white, .5)
+            top: -4px
+            left: -4px
+            right: -4px
+            bottom: -4px
+            border-radius: 50%
+            opacity: 0
+            transition: .3s ease-in-out
+            content: ''
+         &:hover
+            background: $white
+         
+.slider-btn
+   position: absolute
+   top: 100%
+   display: flex
+   align-items: center
+   justify-content: center
+   width: 35px
+   height: 35px
+   margin-top: -10px
+   background-color: rgba(#fff, 1)
+   border: 1px solid $color1
+   border-radius: 50%
+   transition: .3s ease-in-out
+   &:hover
+      opacity: 1
+   &.slick-disabled
+      pointer-events: none
+      opacity: .2
+   &_prev
+      left: 20%
+      svg
+         left: -1px
+   &_next
+      right: 20%
+      svg
+         right: -1px
+   svg
+      position: relative
+      fill: $color1
