@@ -6,6 +6,7 @@ import './components/Header';
 import './components/Popups';
 import './components/Form';
 import './components/Sliders';
+import './components/CTabs';
 import './components/VideoBlock';
 import './sections/Advantages';
 

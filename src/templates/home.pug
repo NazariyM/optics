@@ -252,111 +252,116 @@ block content
 		+b.SECTION.choose#choose.section
 			+e.container.container
 				+e.H2.title.title._center Выберите свой Q-Optics
-				+e.top-row.row
-					+e.A.item(href='#!')
-						+e.item-img-wrap
-							+e.IMG(src='img/content/choose-sm_1.png' alt='image')
-						+e.item-text
-							+e.H6.item-name.title-sm М 2,5-3,5
-							+e.P.item-descr Суперлегкие индивидуальные лупы
-							+e.P.item-info увеличение 2,5Х – 3,5Х
-					+e.A.item(href='#!')
-						+e.item-img-wrap
-							+e.IMG(src='img/content/choose-sm_2.png' alt='image')
-						+e.item-text
-							+e.H6.item-name.title-sm HD 2.5
-							+e.P.item-descr Лупы высокого разрешения
-							+e.P.item-info увеличение 2,5Х
-					+e.A.item(href='#!')
-						+e.item-img-wrap
-							+e.IMG(src='img/content/choose-sm_3.png' alt='image')
-						+e.item-text
-							+e.H6.item-name.title-sm Призма
-							+e.P.item-descr Индивидуальные призматические лупы
-							+e.P.item-info увеличение 3,5Х – 4,5Х
+				.c-tabs
+					.c-tabs__nav.choose__top-row
+						+e.A.item(href='#!').c-tabs__btn.is-active
+							+e.item-img-wrap
+								+e.IMG(src='img/content/choose-sm_1.png' alt='image')
+							+e.item-text
+								+e.H6.item-name.title-sm М 2,5-3,5
+								+e.P.item-descr Суперлегкие индивидуальные лупы
+								+e.P.item-info увеличение 2,5Х – 3,5Х
+						+e.A.item(href='#!').c-tabs__btn
+							+e.item-img-wrap
+								+e.IMG(src='img/content/choose-sm_2.png' alt='image')
+							+e.item-text
+								+e.H6.item-name.title-sm HD 2.5
+								+e.P.item-descr Лупы высокого разрешения
+								+e.P.item-info увеличение 2,5Х
+						+e.A.item(href='#!').c-tabs__btn
+							+e.item-img-wrap
+								+e.IMG(src='img/content/choose-sm_3.png' alt='image')
+							+e.item-text
+								+e.H6.item-name.title-sm Призма
+								+e.P.item-descr Индивидуальные призматические лупы
+								+e.P.item-info увеличение 3,5Х – 4,5Х
+					.c-tabs__for
+						-i = 0
+						while i < 3
+							.c-tabs__tab
+								+e.text
+									+e.H5.text-title Суперлегкие индивидуальные лупы
+									p В суперлегких лупах используется специальный метод расположения линз для устранения оптических искажений и значительного снижения веса.
 
-				+e.text
-					+e.H5.text-title Суперлегкие индивидуальные лупы
-					p В суперлегких лупах используется специальный метод расположения линз для устранения оптических искажений и значительного снижения веса.
+								+e.product-row.row
+									+b.product-item.choose__product
+										+e.img-wrap
+											+e.IMG(src='img/content/choose-lg_1.png' alt='image')
+										+e.H5.name M-2.5 TTL
+										+e.info
+											+e.info-row
+												+e.info-col Увеличение
+												+e.info-col 2.5Х
+											+e.info-row
+												+e.info-col Рабочая дистанция
+												+e.info-col 25-66 см индивидуально
+											+e.info-row
+												+e.info-col Поле зрения
+												+e.info-col 7-10 см
+											+e.info-row
+												+e.info-col Вес
+												+e.info-col 38.0 гр.
+											+e.info-row
+												+e.info-col Цвета оправы
+												+e.info-col._colors
+													-color = 0
+													while color < 11
+														+e.info-color(class= `_${color + 1}`)
+														-color++
+										+e.label гарантия - 10 лет
 
-				+e.product-row.row
-					+b.product-item.choose__product
-						+e.img-wrap
-							+e.IMG(src='img/content/choose-lg_1.png' alt='image')
-						+e.H5.name M-2.5 TTL
-						+e.info
-							+e.info-row
-								+e.info-col Увеличение
-								+e.info-col 2.5Х
-							+e.info-row
-								+e.info-col Рабочая дистанция
-								+e.info-col 25-66 см индивидуально
-							+e.info-row
-								+e.info-col Поле зрения
-								+e.info-col 7-10 см
-							+e.info-row
-								+e.info-col Вес
-								+e.info-col 38.0 гр.
-							+e.info-row
-								+e.info-col Цвета оправы
-								+e.info-col._colors
-									-color = 0
-									while color < 11
-										+e.info-color(class= `_${color + 1}`)
-										-color++
-						+e.label гарантия - 10 лет
+									+b.product-item.choose__product
+										+e.img-wrap
+											+e.IMG(src='img/content/choose-lg_2.png' alt='image')
+										+e.H5.name M-3.0 TTL
+										+e.info
+											+e.info-row
+												+e.info-col Увеличение
+												+e.info-col 3.0X
+											+e.info-row
+												+e.info-col Рабочая дистанция
+												+e.info-col 25-66 см индивидуально
+											+e.info-row
+												+e.info-col Поле зрения
+												+e.info-col 7-10 см
+											+e.info-row
+												+e.info-col Вес
+												+e.info-col 38.0 гр.
+											+e.info-row
+												+e.info-col Цвета оправы
+												+e.info-col._colors
+													-color = 0
+													while color < 11
+														+e.info-color(class= `_${color + 1}`)
+														-color++
+										+e.label гарантия - 10 лет
 
-					+b.product-item.choose__product
-						+e.img-wrap
-							+e.IMG(src='img/content/choose-lg_2.png' alt='image')
-						+e.H5.name M-3.0 TTL
-						+e.info
-							+e.info-row
-								+e.info-col Увеличение
-								+e.info-col 3.0X
-							+e.info-row
-								+e.info-col Рабочая дистанция
-								+e.info-col 25-66 см индивидуально
-							+e.info-row
-								+e.info-col Поле зрения
-								+e.info-col 7-10 см
-							+e.info-row
-								+e.info-col Вес
-								+e.info-col 38.0 гр.
-							+e.info-row
-								+e.info-col Цвета оправы
-								+e.info-col._colors
-									-color = 0
-									while color < 11
-										+e.info-color(class= `_${color + 1}`)
-										-color++
-						+e.label гарантия - 10 лет
-
-					+b.product-item.choose__product
-						+e.img-wrap
-							+e.IMG(src='img/content/choose-lg_1.png' alt='image')
-						+e.H5.name M-3.5 TTL
-						+e.info
-							+e.info-row
-								+e.info-col Увеличение
-								+e.info-col 3.5X
-							+e.info-row
-								+e.info-col Рабочая дистанция
-								+e.info-col 25-66 см индивидуально
-							+e.info-row
-								+e.info-col Поле зрения
-								+e.info-col 7-10 см
-							+e.info-row
-								+e.info-col Вес
-								+e.info-col 38.0 гр.
-							+e.info-row
-								+e.info-col Цвета оправы
-								+e.info-col._colors
-									-color = 0
-									while color < 11
-										+e.info-color(class= `_${color + 1}`)
-										-color++
-						+e.label гарантия - 10 лет
+									+b.product-item.choose__product
+										+e.img-wrap
+											+e.IMG(src='img/content/choose-lg_1.png' alt='image')
+										+e.H5.name M-3.5 TTL
+										+e.info
+											+e.info-row
+												+e.info-col Увеличение
+												+e.info-col 3.5X
+											+e.info-row
+												+e.info-col Рабочая дистанция
+												+e.info-col 25-66 см индивидуально
+											+e.info-row
+												+e.info-col Поле зрения
+												+e.info-col 7-10 см
+											+e.info-row
+												+e.info-col Вес
+												+e.info-col 38.0 гр.
+											+e.info-row
+												+e.info-col Цвета оправы
+												+e.info-col._colors
+													-color = 0
+													while color < 11
+														+e.info-color(class= `_${color + 1}`)
+														-color++
+										+e.label гарантия - 10 лет
+							-i++
 				+e.actions
 					+e.BUTTON.actions-btn.btn(data-popup-target='contact-popup'): span Вызвать специалиста к себе в клинику
 		//end choose
@@ -450,7 +455,7 @@ block content
 			+e.container.container
 				+e.H2.title.title._center Предложения и акции
 				+e.row.row
-					+e.A.card(href='#!' style='background-image: url(img/bg/shares_1.jpg)')
+					+e.A.card(href='#' style='background-image: url(img/bg/shares_1.jpg)')
 						+e.card-content
 							+e.H5.card-title.title-sm Примеры поля зрения при различных рабочих расстояниях
 							+e.DIV.card-date.grad-border
@@ -458,7 +463,7 @@ block content
 								+i('calendar', 'shares__card-date-icon')
 								span 10 сент. 2018
 
-					+e.A.card(href='#!' style='background-image: url(img/bg/shares_2.jpg)')
+					+e.A.card(href='#' style='background-image: url(img/bg/shares_2.jpg)')
 						+e.card-content
 							+e.H5.card-title.title-sm Проверка настроек бинокулярной лупы
 							+e.DIV.card-date.grad-border
@@ -466,7 +471,7 @@ block content
 								+i('calendar', 'shares__card-date-icon')
 								span 10 сент. 2018
 
-					+e.A.card(href='#!' style='background-image: url(img/bg/shares_3.jpg)')
+					+e.A.card(href='#' style='background-image: url(img/bg/shares_3.jpg)')
 						+e.card-content
 							+e.H5.card-title.title-sm Примеры поля зрения при различных  рабочих расстояниях
 							+e.DIV.card-date.grad-border

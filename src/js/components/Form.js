@@ -6,8 +6,7 @@ class Form {
   constructor(formEl) {
     this.$form = $(formEl);
     this.$input = this.$form.find('.js-input');
-    this.$textarea = this.$form.find('.form-textarea');
-    this.$formSubmit = this.$form.find('.form-submit');
+    this.$formSubmit = this.$form.find('button[type="submit"]');
 
     this.init();
   }
@@ -16,8 +15,8 @@ class Form {
     this.maskInput();
     this.removeError();
     this.validate();
+    this.initThanksNewsPop();
     this.initThanksPop();
-    this.checkFill();
   }
 
   maskInput() {
@@ -53,6 +52,26 @@ class Form {
       thanskPopInstance.open();
 
       setTimeout(() => {
+        thanskPopInstance.close();
+      }, 2000);
+
+      $this[0].reset();
+      _this.checkFill();
+    });
+  }
+
+  initThanksNewsPop() {
+    const _this = this;
+
+    $('.js-news-form').on('submit', function (e) {
+      e.preventDefault();
+      const $this = $(this);
+
+      Popup.closeAllPopups();
+      const thanskPopInstance = $('[data-popup-target="thanks-news-popup" ]').popup();
+      thanskPopInstance.open();
+
+      setTimeout(() => {
         // thanskPopInstance.close();
       }, 2000);
 
@@ -79,7 +98,7 @@ class Form {
   }
 
   removeError() {
-    this.$input.add(this.$textarea).on('click focus', (ev) => {
+    this.$input.on('click focus', (ev) => {
       $(ev.currentTarget).closest('.form-field').removeClass(css.error);
     });
   }

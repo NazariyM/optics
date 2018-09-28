@@ -19,7 +19,7 @@
    &::before
       +coverdiv
       opacity: .9
-      background: #17171a url(../img/decor/noise_black.png)
+      background: rgba($black, .7)
       content: ''
    &:after
       content: ''
@@ -79,20 +79,6 @@ body.popup-opened
    -moz-transform: translate3d(0, 0, 0)
    transform: translate3d(0, 0, 0)
   
-// *** begin thanks-popup *** //
-.thanks-popup
-   text-align: center
-   &__btn
-      display: none
-   p
-      color: $color2
-      font-size: 18px
-      line-height: 24px
-      text-align: center
-      +xs
-         font-size: 16px
-// end thanks-popup //
-
 // *** begin contact-form *** //
 .contact-form
    padding: 40px 30px
@@ -123,3 +109,16 @@ body.popup-opened
       padding: 22px 30px 20px
 // end contact-form //
 
+// *** begin thanks-popup *** //
+.thanks-popup
+   text-align: center
+   &__btn
+      display: none
+   p
+      color: $color2
+      font-size: 16px
+      line-height: 24px
+      text-align: center
+      +xs
+         font-size: 16px
+// end thanks-popup //

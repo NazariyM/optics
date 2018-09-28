@@ -4,11 +4,20 @@ mixin popup(el)
 		when 'thanks-popup'
 			+b.popup(data-popup-id='thanks-popup', tabindex='-1', role='dialog')
 				+e.container._xs
-					+e.close.js-popup-close: +i('close')
+					+e.close.js-popup-close: +svg('close')
 					+b.contact-form.thanks-popup
-						+e.H5.title.title Спасибо!
+						+e.H5.title.title-sm Спасибо!
 						+e.P Наш менеджер свяжется с Вами в ближайшее время
 						+b.BUTTON.thanks-popup__btn(data-popup-target='thanks-popup' type='button')
+
+		when 'thanks-news-popup'
+			+b.popup(data-popup-id='thanks-news-popup', tabindex='-1', role='dialog')
+				+e.container._xs
+					+e.close.js-popup-close: +svg('close')
+					+b.contact-form.thanks-popup
+						+e.H5.title.title-sm Спасибо!
+						+e.P Вы успешно подписались на новости Q-Optics
+						+b.BUTTON.thanks-popup__btn(data-popup-target='thanks-news-popup' type='button')
 
 		when 'contact-popup'
 			+b.popup(data-popup-id='contact-popup', tabindex='-1', role='dialog')
@@ -31,7 +40,7 @@ mixin popup(el)
 										+i('phone')
 							+b.form-field.contact-form__field
 								label
-									+e.INPUT.input.js-input(type='text' name='' placeholder='Ваш e-mail' required)
+									+e.INPUT.input.js-input(type='email' name='' placeholder='Ваш e-mail' required)
 									+e.icon
 										+i('email')
 							+b.form-field.contact-form__field

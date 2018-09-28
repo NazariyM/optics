@@ -1,11 +1,12 @@
 // *** begin screen *** //
 .screen
-   height: 100vh
+   height: 750px
    padding-top: 90px
    background-image: radial-gradient(circle 960px at center, #42414b 0%, #25242e 100%)
    +mob-fix
       height: 200vh
    +xs
+      height: 100vh
       padding-top: 70px
    &__container
       display: flex
@@ -14,7 +15,7 @@
       padding-bottom: 103px
       height: 100%
       +xs
-         padding-bottom: 80px
+         padding-bottom: 60px
    &__img
       &-wrap
          position: absolute
@@ -23,8 +24,9 @@
          z-index: 2
          width: percentage(880 / 1140)
          transform: translate(-50.6%, -50%)
-         +xs
+         +sm
             top: 40%
+         +xs
             width: 105%
             transform: translate(-48.5%, -50%)
       &-label
@@ -46,12 +48,13 @@
          border-radius: 50%
          color: #fff
          +xs
-            display: none
-            //width: 84px
-            //height: 84px
-            //font-size: 10px
-            //line-height: 14px
-            //padding: 6px 15px 0
+            top: 45%
+            right: 75%
+            width: 70px
+            height: 70px
+            font-size: 9px
+            line-height: 12px
+            padding: 6px 15px 0
          &::after
             position: absolute
             top: 7px
@@ -63,10 +66,10 @@
             border-radius: 50%
             content: ''
             +xs
-               top: 4px
-               left: 4px
-               right: 4px
-               bottom: 4px
+               top: 3px
+               left: 3px
+               right: 3px
+               bottom: 3px
    &__decor-text
       position: absolute
       top: 25px
@@ -74,9 +77,10 @@
       transform: translateX(-50%)
       +md
          top: 15%
+      +sm
+         top: 7%
       +xs
          display: block
-         top: 7%
          height: 80px
          width: 300px
          
@@ -126,6 +130,9 @@
       +md
          flex-direction: column
    &__list
+      display: flex
+      flex-direction: column
+      align-items: flex-start
       z-index: 1
       flex: 0 0 555px
       width: 555px
@@ -168,6 +175,7 @@
    &__line
       position: absolute
       top: calc(50% - 1px)
+      pointer-events: none
       +md
          display: none
       &-el
@@ -468,7 +476,6 @@
    &__title
       margin-bottom: 55px
    &__top-row
-      margin-bottom: 52px
       +md
          flex-wrap: wrap
          justify-content: center
@@ -494,7 +501,6 @@
          width: 100%
          flex: 0 1 auto
          max-width: 420px
-         opacity: 1
       &:hover
          opacity: 1
       &:not(:last-child)
@@ -509,6 +515,9 @@
             content: ''
             +xs
                display: none
+      &:nth-child(1) ~ &
+         +xs
+            margin-top: 30px
       &:nth-child(2) ~ &
          +md
             margin-top: 30px
@@ -589,11 +598,10 @@
 // *** begin about *** //
 .about
    padding: 105px 0 110px
-   background-color: $color9
+   background-color: #f5f4f9
    &__title
       margin-bottom: 35px
-      +md
-         max-width: 470px
+      max-width: 470px
       &::after
          +xs
             top: calc(50% - -1px)
@@ -701,6 +709,9 @@
       counter-reset: schemeCount
       +xs
          flex-direction: column
+      .is-ie &
+         display: block
+         font-size: 0
    &__item
       position: relative
       flex: 0 1 33.33333%
@@ -717,11 +728,15 @@
          width: 100%
          margin: 0 auto
          text-align: center
+      .is-ie &
+         display: inline-block
+         vertical-align: middle
+         font-size: 16px
       &::before
          display: block
-         margin-bottom: 24px
+         margin-bottom: 20px
          color: $color1
-         height: 50px
+         height: 55px
          +f('gp700', 60, 60)
          letter-spacing: 1.72px
          content: counter(schemeCount, decimal-leading-zero)
@@ -786,6 +801,12 @@
       +xs
          height: 240px
          padding: 20px
+      .is-ie &
+         max-width: 573px
+         &:nth-child(3)
+            flex: 0 1 auto
+            width: 100%
+            max-width: 1110px
       &::after
          +coverdiv
          background-color: rgba(#25242e, .9)
@@ -825,6 +846,8 @@
    overflow: hidden
    +xs
       height: 300px
+   object-fit
+      top: 0!important
    &__container
       display: flex
       flex-direction: column

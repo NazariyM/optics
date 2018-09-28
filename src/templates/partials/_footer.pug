@@ -12,10 +12,10 @@
 		+e.col
 			+b.subscribe.footer__subscribe
 				+e.H6.title Подпишитесь на наши новости:
-				+e.FORM.form(action='#!' method='POST')
+				+e.FORM.form.js-news-form(action='#!' method='POST')
 					+e.form-field
 						+e.form-field-icon
 							+i('email')
-						+e.INPUT.form-field-input(type='text' name='' placeholder='Ваш e-mail' required)
+						+e.INPUT.form-field-input(type='email' name='' placeholder='Ваш e-mail' required)
 						+e.BUTTON.form-btn.btn(type='submit'): span Подписаться
 //end footer
