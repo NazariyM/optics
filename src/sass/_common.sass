@@ -38,6 +38,7 @@ body
 
 .btn
    position: relative
+   z-index: 1
    display: inline-block
    padding: 29px 30px 28px
    outline: 0
@@ -59,9 +60,9 @@ body
       top: -2px
       left: -2px
       right: -2px
+      z-index: -1
       height: calc(200% + 4px)
       pointer-events: none
-      border-radius: 28px
       background-image: linear-gradient(to top, #3ae1ff 0%, #00afe1 50%, #3ae1ff 100%)
       transition: .4s cubic-bezier(.22,.61,.36,1)
       content: ''
